@@ -35,9 +35,9 @@ int main(void) {
 
     long long total_removed = 0;
 
-    // Iteratively remove accessible rolls
+
     while (1) {
-        // Mark accessible positions this round
+
         unsigned char remove_mask[MAX_ROWS][MAX_COLS];
         memset(remove_mask, 0, sizeof(remove_mask));
 
@@ -62,7 +62,7 @@ int main(void) {
 
         if (round_removed == 0) break;
 
-        // Apply removals simultaneously
+
         for (int r = 0; r < rows; ++r) {
             for (int c = 0; c < cols; ++c) {
                 if (remove_mask[r][c]) grid[r][c] = '.';

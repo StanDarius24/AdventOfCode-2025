@@ -24,7 +24,7 @@ int main(void) {
         int len = (int)strcspn(line, "\r\n");
         if (len == 0) continue;
         if (cols == 0) cols = len;
-        // If variable-width lines appear, truncate/align to first line width
+
         if (len > cols) len = cols;
         for (int j = 0; j < len; ++j) grid[rows][j] = line[j];
         rows++;

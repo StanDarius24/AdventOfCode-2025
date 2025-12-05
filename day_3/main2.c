@@ -17,8 +17,7 @@ unsigned long long maxNumberFromKDigits(const int* digits, int len, int k) {
         if (top < k) {
             stack[top++] = d;
         } else {
-            // Already have k digits; if we haven't dropped enough, keep dropping from future
-            // by reducing toDrop when skipping digits.
+
             if (toDrop > 0) --toDrop;
         }
     }
